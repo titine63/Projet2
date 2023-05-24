@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border: 1px solid yellow;
+  background: #00294e;
+  padding: 10px;
+  color: white;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+a {
+  color: white;
+}

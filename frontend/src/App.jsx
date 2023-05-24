@@ -1,13 +1,16 @@
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 
 import "./App.css";
+import Layout from "@components/Layout/Layout";
 
 function App() {
   return (
-    <div className="App">
+    <Layout>
+      <main className=" wrappe">
       <Home />
-      <p>coucou</p>
-    </div>
+
+      </main>
+    </Layout>
   );
 }
 
