@@ -22,7 +22,8 @@
     "description": "Fast good de produits frais et locaux. Burgers, viandes et poulets grill\u00e9s et desserts gourmants.",
     "email": "poulettebourbon@gmail.com",
     "t\u00e9l\u00e9phone": "+33 4 63 07 17 99",
-    "site internet": null,
+    "site internet": "https://www.valdesioule.com/restaurants/poulette/",
+    "image": "https://www.valdesioule.com/wp-content/uploads/wpetourisme/17210206-diaporama-1200x1200.jpg",
     "latitude": 46.306143,
     "longitude": 3.296333
   },
@@ -35,7 +36,8 @@
     "description": null,
     "email": null,
     "t\u00e9l\u00e9phone": "+33 4 70 96 99 47",
-    "site internet": null,
+    "site internet": "https://www.allier-auvergne-tourisme.com/commerce-et-service/cusset/le-fournil-de-tara/5481350",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipM_4VPYIRJp2o3xOMQ2qDsMrfZQFA0A3qg_lcAs=s680-w680-h510",
     "latitude": 46.137493,
     "longitude": 3.434943
   },
@@ -49,6 +51,7 @@
     "email": "['chezchaumat@alicepro.fr', 'contact@chezchaumat.com']",
     "t\u00e9l\u00e9phone": "+33 4 70 67 52 21",
     "site internet": "http://www.chezchaumat.com/",
+    "image": "https://medias.logishotels.com/property-images/3093/restaurant/retro/grand/hotel-chez-chaumat-restaurant-cerilly-159227.jpg",
     "latitude": 46.617555,
     "longitude": 2.820446
   },
