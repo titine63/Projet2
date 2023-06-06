@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DisplayAccommodation from "@components/DisplayAccommodation";
+import DisplayAccommodation from "../../components/DisplayAccommodation";
 import accommodationsData from "../../data/hebergements.json";
 import "./accommodation.css";
 
