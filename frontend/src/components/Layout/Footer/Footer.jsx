@@ -59,7 +59,7 @@ export default function Footer() {
         </section>
       </div>
       <div className="bottom">
-        <p>Copyright &copy; 2023 Tout droits réservés | Les recettes de Mam'</p>
+        <p>Copyright &copy; 2023 Tout droits réservés</p>
       </div>
     </footer>
   );
