@@ -1,0 +1,34 @@
+.site-page {
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.display-site {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.display-site h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.display-site p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.display-site a {
+  color: blue;
+}
+
+.site-image {
+  width: 17cm;
+  height: 17cm;
+  object-fit: cover;
+  border-radius: 5px;
+}

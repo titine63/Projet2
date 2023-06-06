@@ -37,12 +37,16 @@
   },
   "settings": {
     "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
       "eslint-import-resolver-custom-alias": {
         "alias": {
           "@assets": "./src/assets",
           "@components": "./src/components",
           "@pages": "./src/pages",
-          "@services": "./src/services"
+          "@services": "./src/services",
+          "@data": "./src/data"
         },
         "extensions": [".js", ".jsx"]
       }
