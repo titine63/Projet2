@@ -17,17 +17,11 @@ main {
   background: #a2acb6;
 }
 
-/* .section-search,
-.left,
-.right {
-  border: 2px solid blue;
-} */
-
 .section-search {
   display: inline-grid;
   gap: 42px;
-  width: 850px;
-  margin-top: 90px;
+  /* width: 850px; */
+  /* margin-top: 90px; */
 }
 
 .right {
@@ -35,15 +29,9 @@ main {
   flex-direction: column;
   align-items: center;
   float: right;
-  gap: 500px;
+  gap: 17rem;
   margin-right: 250px;
-  padding-top: 90px;
-  height: 909px;
-}
-
-.section-event {
-  bottom: 350px;
-  position: relative;
+  padding-top: 125px;
 }
 
 .left {
