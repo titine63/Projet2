@@ -5,12 +5,12 @@ import "./header.css";
 export default function Header() {
   return (
     <header>
-      <h1>Mon App</h1>
+      <h1 className="logo">AlliEZ</h1>
       <nav>
         <Link to="/">HOME</Link>
-        <Link to="accommodation">HEBERGEMENT</Link>
-        <Link to="restauration">RESTAURATION</Link>
-        <Link to="site">A FAIRE</Link>
+        <Link to="/accommodation">HEBERGEMENT</Link>
+        <Link to="/restauration">RESTAURATION</Link>
+        <Link to="/a faire">ACTIVITES</Link>
       </nav>
     </header>
   );
