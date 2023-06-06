@@ -4,43 +4,44 @@ main.wrappe {
 }
 
 p {
-    padding-bottom: 2vh;
+  padding-bottom: 2vh;
 }
 
 div.activities-mainpage {
-    margin: 0 10vw;
-    padding: 5vh 0;
+  margin: 0 10vw;
+  padding: 5vh 0;
 }
 
 .activities-presentation {
-    display: block;
-    background-color: white;
-    text-align: center;
-    padding: 2vh 2vw;
-    border-radius: 10px;
+  display: block;
+  background-color: white;
+  text-align: center;
+  padding: 2vh 2vw;
+  border-radius: 10px;
 }
 
 .activities-categories {
-    padding: 5vh 0;
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    font-weight: bold;
-    font-size: large;
+  padding: 5vh 0;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
 }
 
-.activities-categories-img, .activity-ideas-img {
-    border-radius: 20px;
+.activities-categories-img,
+.activity-ideas-img {
+  border-radius: 20px;
 }
 
 section.activity-ideas {
-    text-align: center;
-    font-weight: bolder;
+  text-align: center;
+  font-weight: bolder;
 }
 
 div.activity-ideas {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5vw;
 }

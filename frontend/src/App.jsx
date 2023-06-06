@@ -1,4 +1,3 @@
-import Home from "./pages/Home/Home";
 import Activities from "@pages/Activities/Activities";
 
 import "./App.css";
