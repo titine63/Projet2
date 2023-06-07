@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../pages/accommodation-page/accommodation.css";
+import { Link } from "react-router-dom";
 
 function DisplayAccommodation({ accommodation }) {
   return (
@@ -19,10 +20,10 @@ function DisplayAccommodation({ accommodation }) {
       <p>Email : {accommodation.email}</p>
       <p>Téléphone : {accommodation.téléphone}</p>
       <p>
-        Site Web :{" "}
-        <a href={accommodation["site internet"]}>
+        Site Web :
+        <Link to={accommodation["site internet"]}>
           {accommodation["site internet"]}
-        </a>
+        </Link>
       </p>
     </div>
   );
