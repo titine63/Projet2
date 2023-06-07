@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../pages/accommodation-page/accommodation.css";
+import {
+  faEnvelope,
+  faPhone,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function DisplayAccommodation({ accommodation }) {
   return (
@@ -16,10 +22,14 @@ function DisplayAccommodation({ accommodation }) {
         0{accommodation["code postal"]} {accommodation.city}
       </p>
       <p>{accommodation.description}</p>
-      <p>Email : {accommodation.email}</p>
-      <p>Téléphone : {accommodation.téléphone}</p>
       <p>
-        Site Web :{" "}
+        <FontAwesomeIcon icon={faEnvelope} /> Email : {accommodation.email}
+      </p>
+      <p>
+        <FontAwesomeIcon icon={faPhone} /> Téléphone : {accommodation.téléphone}
+      </p>
+      <p>
+        <FontAwesomeIcon icon={faGlobe} /> Site Web :&nbsp;
         <a href={accommodation["site internet"]}>
           {accommodation["site internet"]}
         </a>
