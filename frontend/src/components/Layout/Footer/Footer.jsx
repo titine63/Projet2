@@ -25,7 +25,7 @@ export default function Footer() {
         <section>
           <h3>Evénement</h3>
           <div className="link">
-            <Link to="/evenement">Evénement</Link>
+            <Link to="/activities">Evénement</Link>
             <Link to="/date">Dates à garder</Link>
           </div>
         </section>

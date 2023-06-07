@@ -1,7 +1,11 @@
 .explorez {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin: 20px;
+}
+
+.Carte {
+  height: 200px;
+  width: 350px;
 }
 
 .type1,
@@ -24,13 +28,10 @@
   margin-top: 100px;
   text-align: center;
 }
-.Carte {
-  height: 700px;
-    width: 850px;
-}
-@media (min-width : 1024px) {
+
+@media (min-width: 1024px) {
   .Carte {
-      height: 400px;
-      width: 850px;
-    }
+    height: 400px;
+    width: 850px;
+  }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Activities from "@pages/Activities/Activities";
-
 import "./App.css";
 import Layout from "@components/Layout/Layout";
 import SitePage from "@pages/site-page/Site";
@@ -21,14 +20,6 @@ function App() {
           <Route path="/site" element={<SitePage />} />
         </Routes>
       </main>
-      {/* <main className="wrapper app-container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/accommodation" element={<AccommodationPage />} />
-          <Route path="/activities" element={<Activities />} />
-          <Route path="/site" element={<SitePage />} />
-        </Routes>
-      </main> */}
     </Layout>
   );
 }
