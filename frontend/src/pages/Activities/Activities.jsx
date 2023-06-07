@@ -13,50 +13,59 @@ function Activities() {
       <section className="activities-categories">
         <div>
           <p>SPORT & LOISIRS</p>
-          <img
-            className="activities-categories-img"
-            src="https://picsum.photos/200/150"
-            alt="Activités sportives et de loisirs"
-            href=""
-          />
+          <a href="/site">
+            <img
+              className="activities-categories-img"
+              src="https://picsum.photos/200/150"
+              alt="Activités sportives et de loisirs"
+            />
+          </a>
         </div>
         <div>
           <p>CULTURE</p>
-          <img
-            className="activities-categories-img"
-            src="https://picsum.photos/200/150"
-            alt="Activités culturelles"
-            href=""
-          />
+          <a href="/site">
+            <img
+              className="activities-categories-img"
+              src="https://picsum.photos/200/150"
+              alt="Activités culturelles"
+            />
+          </a>
         </div>
         <div>
           <p>NATURE</p>
-          <img
-            className="activities-categories-img"
-            src="https://picsum.photos/200/150"
-            alt="Activités en pleine nature"
-            href=""
-          />
+          <a href="/site">
+            <img
+              className="activities-categories-img"
+              src="https://picsum.photos/200/150"
+              alt="Activités en pleine nature"
+            />
+          </a>
         </div>
       </section>
       <section className="activity-ideas">
         <p>NOS SUGGESTIONS</p>
         <div className="activity-ideas">
-          <img
-            className="activity-ideas-img"
-            src="https://picsum.photos/150/100"
-            alt="Idée d'activité"
-          />
-          <img
-            className="activity-ideas-img"
-            src="https://picsum.photos/150/100"
-            alt="Idée d'activité"
-          />
-          <img
-            className="activity-ideas-img"
-            src="https://picsum.photos/150/100"
-            alt="Idée d'activité"
-          />
+          <a href="/site">
+            <img
+              className="activity-ideas-img"
+              src="https://picsum.photos/150/100"
+              alt="Idée d'activité"
+            />
+          </a>
+          <a href="/site">
+            <img
+              className="activity-ideas-img"
+              src="https://picsum.photos/150/100"
+              alt="Idée d'activité"
+            />
+          </a>
+          <a href="/site">
+            <img
+              className="activity-ideas-img"
+              src="https://picsum.photos/150/100"
+              alt="Idée d'activité"
+            />
+          </a>
         </div>
       </section>
     </div>
