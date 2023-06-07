@@ -10,7 +10,7 @@ export default function Header() {
         <Link to="/">HOME</Link>
         <Link to="/accommodation">HEBERGEMENT</Link>
         <Link to="/restauration">RESTAURATION</Link>
-        <Link to="/a faire">ACTIVITES</Link>
+        <Link to="/activities">ACTIVITES</Link>
       </nav>
     </header>
   );
