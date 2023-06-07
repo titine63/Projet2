@@ -1,8 +1,4 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+
 
 h2 {
   text-align: center;
@@ -14,12 +10,15 @@ h3 {
   margin-top: 35px;
   font-size: 1.4rem;
   transition: width 1s ease 0s;
+  text-align: center;
 }
-.img_even {
-  /* width: 300px; */
-  width: 178px;
-  transition: width 1s ease 0s;
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
+
 .btn_even {
   width: 300px;
   height: 30px;
@@ -28,11 +27,15 @@ h3 {
 .even1,
 .even2,
 .even3 {
-  display: inline-block;
-  text-align: center;
-  margin-left: 20px;
+width: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 10px;
+}
+.even1 img,
+.even2 img,
+.even3 img {
+  max-width: 100%;
 }
 
-.img_even:hover {
-  width: 300px;
-}
