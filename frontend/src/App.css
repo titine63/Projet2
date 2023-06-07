@@ -4,9 +4,11 @@
   overflow: hidden;
 }
 
-main {
+.wrapper {
   color: white;
   min-height: calc(100vh - (80px + 80px));
+  background: #a2acb6;
+
 }
 
 a {
@@ -17,4 +19,13 @@ a {
 
 a:hover {
   opacity: 0.5;
+}
+
+@media (min-width : 1024px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 40px;
+  } 
 }

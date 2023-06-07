@@ -68,7 +68,7 @@ export default function GoogleMap() {
 
   return (
     <div className="lft">
-      <div className="Carte" style={{ height: "35vh", width: "35vw" }}>
+      <div className="Carte">
         <h2 className="explorez">Explorez notre carte</h2>
         <GoogleMapReact
           bootstrapURLKeys={{
