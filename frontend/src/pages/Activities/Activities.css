@@ -1,4 +1,4 @@
-main.wrappe {
+main.wrapper app-container {
   background-color: #a2acb6;
   color: black;
 }
@@ -15,14 +15,20 @@ div.activities-mainpage {
 .activities-presentation {
   display: block;
   background-color: white;
+  color: black;
   text-align: center;
   padding: 2vh 2vw;
   border-radius: 10px;
 }
 
+.activities-presentation h2 {
+  padding-bottom: 2vh;
+}
+
 .activities-categories {
   padding: 5vh 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
   font-weight: bold;
@@ -42,6 +48,7 @@ section.activity-ideas {
 div.activity-ideas {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 5vw;
 }
