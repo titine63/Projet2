@@ -14,7 +14,7 @@ function DisplayRestauration({ restauration }) {
       <h3>{restauration.nom} </h3>
       <img
         src={restauration.image}
-        alt="Hébergement"
+        alt="Restauration"
         className="restauration-image"
       />
       <p>{restauration.rue}</p>
