@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../pages/restauration-page/restauration.css";
+import {
+  faEnvelope,
+  faPhone,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function DisplayRestauration({ restauration }) {
   return (
@@ -16,10 +22,14 @@ function DisplayRestauration({ restauration }) {
         0{restauration["code postal"]} {restauration.city}
       </p>
       <p>{restauration.description}</p>
-      <p>Email : {restauration.email}</p>
-      <p>Téléphone : {restauration.téléphone}</p>
       <p>
-        Site Web :{" "}
+        <FontAwesomeIcon icon={faEnvelope} /> Email : {restauration.email}
+      </p>
+      <p>
+        <FontAwesomeIcon icon={faPhone} /> Téléphone : {restauration.téléphone}
+      </p>
+      <p>
+        <FontAwesomeIcon icon={faGlobe} /> Site Web :&nbsp;
         <a href={restauration["site internet"]}>
           {restauration["site internet"]}
         </a>
