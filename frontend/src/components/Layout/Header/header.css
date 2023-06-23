@@ -8,10 +8,28 @@ header {
   padding: 20px;
   color: white;
 }
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   color: white;
   font-size: 2.5rem;
+  margin-right: 10px;
 }
+
+.logo-image {
+  width: 50px; /* Modifiez la taille de l'image en fonction de vos besoins */
+  height: auto; /* Utilisez "auto" pour maintenir les proportions de l'image */
+}
+
+.logo-text {
+  color: gold;
+  font-size: 2.5rem;
+}
+
+
 nav {
   /* width: 100%; */
   display: flex;
