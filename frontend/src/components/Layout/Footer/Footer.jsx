@@ -59,7 +59,7 @@ export default function Footer() {
         </section>
       </div>
       <div className="bottom">
-        <p>Copyright &copy; 2023 Tout droits réservés</p>
+        <p>Copyright &copy; 2023 Tous droits réservés</p>
       </div>
     </footer>
   );
