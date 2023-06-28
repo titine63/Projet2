@@ -103,5 +103,3 @@ CREATE TABLE map (
     CONSTRAINT fk_events FOREIGN KEY (events_id) REFERENCES events(id),
     CONSTRAINT fk_users FOREIGN KEY (users_id) REFERENCES users(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-INSERT INTO map (name, latitude, longitude) VALUES ("endroit", "28.2424", "20.2424");
