@@ -17,7 +17,7 @@ export default function GoogleMap() {
     },
     {
       id: 3,
-      title: "The Serpentine",
+      title: "Centre Ville VICHY",
       lat: 46.12631041187808,
       lng: 3.425410703779473,
     },
