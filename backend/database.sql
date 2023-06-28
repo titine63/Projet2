@@ -5,14 +5,14 @@ DROP TABLE IF EXISTS restaurants;
 DROP TABLE IF EXISTS events;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS map;
-
+​
 CREATE TABLE category (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     title VARCHAR(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+​
 INSERT INTO category (title) VALUES ("Site culturel"), ("Site sportif, récréatif et de loisirs"), ("Site naturel");
-
+​
 CREATE TABLE sites (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(80) NOT NULL,
@@ -29,9 +29,9 @@ CREATE TABLE sites (
     category_id INT NOT NULL,
     CONSTRAINT fk_category FOREIGN KEY (category_id) REFERENCES category(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+​
 INSERT INTO sites (name, street, postal_code, city, description, email, phone_number, website, image, latitude, longitude, category_id) VALUES ("toto", "2 rue des pignons", "12345", "Pignons-sur-rue", "C'est super!", "toto@email.com", "1234567890", "http://localhost", "https://placekitten.com/200/300", "24.24", "24.24", 1);
-
+​
 CREATE TABLE accommodation (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(80) NOT NULL,
@@ -46,9 +46,9 @@ CREATE TABLE accommodation (
     latitude DECIMAL(10, 8),
     longitude DECIMAL(10, 8)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+​
 INSERT INTO accommodation (name, street, postal_code, city, description, email, phone_number, website, image, latitude, longitude) VALUES ("titi", "2 rue des pignons", "12345", "Pignons-sur-rue", "C'est super!", "titi@email.com", "1234567890", "https://placekitten.com/200/300", "https://placekitten.com/200/300", "25.24", "23.24");
-
+​
 CREATE TABLE restaurants (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(80) NOT NULL,
@@ -63,21 +63,20 @@ CREATE TABLE restaurants (
     latitude DECIMAL(10, 8),
     longitude DECIMAL(10, 8)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-);
-
-CREATE TABLE `events` (
-  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `date` date,
-  `image` varchar(255),
-  `latitude` DECIMAL(10, 8),
-  `longitude` DECIMAL(11, 8)
-  
-);
-
+​
+INSERT INTO restaurants (name, street, postal_code, city, description, email, phone_number, website, image, latitude, longitude) VALUES ("tata", "2 rue des pignons", "12345", "Pignons-sur-rue", "C'est super!", "tata@email.com", "1234567890", "https://placekitten.com/200/300", "https://placekitten.com/200/300", "26.2424", "22.2424");
+​
+CREATE TABLE events (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name VARCHAR(80) NOT NULL,
+    date DATETIME,
+    image VARCHAR(255),
+    latitude DECIMAL(10, 8),
+    longitude DECIMAL(10, 8)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+​
 INSERT INTO events (name, date, image, latitude, longitude) VALUES ("teuf", "2023-06-29", "https://placekitten.com/200/300", "27.2424", "21.2424");
-
+​
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     firstname VARCHAR(80) NOT NULL,
@@ -85,9 +84,9 @@ CREATE TABLE users (
     email VARCHAR(255) UNIQUE NOT NULL,
     hashedPassword VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+​
 INSERT INTO users (firstname, lastname, email, hashedPassword) VALUES ("mec", "inconnu", "inconnu@anonyme.com", "183454835465");
-
+​
 CREATE TABLE map (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(255),
