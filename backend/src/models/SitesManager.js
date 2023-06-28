@@ -7,8 +7,8 @@ class SitesManager extends AbstractManager {
   }
 
   insert(sites) {
-    return this.database.query(`insert into ${this.table} (name) values (?)`, [
-      sites.name,
+    return this.database.query(`insert into ${this.table} (name, street, postal_code, city, description, email, phone_number, website, image, latitude, longitude, category_id) values (?,?,?,?,?,?,?,?,?,?,?,?)`, [
+      sites.name, sites.street, sites.postal_code, sites.city, sites.description, sites.email, sites.phone_number, sites.website, sites.image, sites.latitude, sites.longitude, sites.category_id
     ]);
   }
 

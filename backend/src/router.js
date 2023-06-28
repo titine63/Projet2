@@ -9,6 +9,7 @@ const sitesControllers = require("./controllers/sitesControllers");
 router.get("/hebergements", hebergementControllers.browse);
 
 router.get("/sites", sitesControllers.browse);
+router.get("/sites/category/:category_id", sitesControllers.browseByCategory);
 router.get("/sites/:id", sitesControllers.read);
 router.put("/sites/:id", sitesControllers.edit);
 router.post("/sites", sitesControllers.add);
