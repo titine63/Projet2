@@ -1,7 +1,3 @@
-
-
-
-
 CREATE TABLE `site` (
   `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
@@ -54,7 +50,7 @@ CREATE TABLE `map` (
 CREATE TABLE `events` (
   `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
-  `date` date,
+  `date` DateTime,
   `image` varchar(255),
   `latitude` DECIMAL(10, 8),
   `longitude` DECIMAL(11, 8)
