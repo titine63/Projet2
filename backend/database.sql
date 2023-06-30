@@ -208,7 +208,14 @@ CREATE TABLE events (
     latitude DECIMAL(10, 8),
     longitude DECIMAL(10, 8)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-INSERT INTO events (name, date, image, latitude, longitude) VALUES ("teuf", "2023-06-29", "https://placekitten.com/200/300", "27.2424", "21.2424");
+
+
+INSERT INTO events (name, date, image, latitude, longitude) VALUES 
+("Visite guidée : Histoire d'eaux, Vichy : 2 000 ans de thermalisme", "2023-06-29", "https://static.apidae-tourisme.com/filestore/objets-touristiques/images/185/202/12962489.jpg", "46.125031", "3.41919"),
+("Second Empire, Belle Époque, Âge d'Or de Vichy", "2023-17-09", "https://static.apidae-tourisme.com/filestore/objets-touristiques/images/15/93/12475663.jpg", "46.124944", "3.419147"),
+("Visite guidée : Vichy, Capitale de l'État français 40/44", "2023-07-29", "https://static.apidae-tourisme.com/filestore/objets-touristiques/images/130/215/7329666.jpg", "46.124944", "3.419147");
+
+
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     firstname VARCHAR(80) NOT NULL,
