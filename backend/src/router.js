@@ -7,6 +7,7 @@ const restaurantsController = require("./controllers/restaurationControllers");
 const hebergementControllers = require("./controllers/hebergementControllers");
 const eventsControllers = require("./controllers/eventsControllers");
 const sitesControllers = require("./controllers/sitesControllers");
+const usersControllers = require("./controllers/usersControllers");
 
 router.get("/hebergements", hebergementControllers.browse);
 
@@ -28,5 +29,11 @@ router.post("/events", eventsControllers.create);
 router.get("/events", eventsControllers.browse);
 router.get("/events/:id", eventsControllers.find);
 router.delete("/events/:id", eventsControllers.destroy);
+
+router.get("/users", usersControllers.getAllUsers);
+router.get("/users/:id", usersControllers.getUserById);
+router.put("/users/:id", usersControllers.editUser);
+router.post("/users", usersControllers.addUser);
+router.delete("/users/:id", usersControllers.deleteUser);
 
 module.exports = router;
