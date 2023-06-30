@@ -31,11 +31,16 @@ const models = {};
 
 const ItemManager = require("./ItemManager");
 const RestaurantsManager = require("./RestaurantsManager");
+const EventsManager = require("./eventsManager");
 
 models.item = new ItemManager();
 models.item.setDatabase(pool);
+
 models.restaurants = new RestaurantsManager();
 models.restaurants.setDatabase(pool);
+
+models.events = new EventsManager();
+models.events.setDatabase(pool);
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 

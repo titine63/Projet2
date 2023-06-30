@@ -200,17 +200,6 @@ INSERT INTO restaurants (name, street, postal_code, city, description, email, ph
 
 
 
-
-
-          
-
-
-
-
-
-
-
-
 CREATE TABLE events (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(80) NOT NULL,
