@@ -1,9 +1,16 @@
+/* eslint-disable camelcase */
 /* eslint-disable prettier/prettier */
 const AbstractManager = require("./AbstractManager");
 
 class SitesManager extends AbstractManager {
   constructor() {
     super({ table: "sites" });
+  }
+
+  findByCategory(category_id) {
+    return this.database.query(`select * from  ${this.table} where category_id = ?`, [
+      category_id,
+    ]);
   }
 
   insert(sites) {

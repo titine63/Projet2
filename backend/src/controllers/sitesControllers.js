@@ -13,15 +13,15 @@ const browse = (req, res) => {
     });
 };
 
-// TO MODIFY - selects based on sites_id instead of category_id
+// TO MODIFY - to display not found when category_id does not exist
 const browseByCategory = (req, res) => {
   models.sites
-    .find(req.params.category_id)
-    .then(([rows]) => {
-      if (rows[0] == null) {
+    .findByCategory(req.params.category_id)
+    .then(([results]) => {
+      if (results == null) {
         res.sendStatus(404);
       } else {
-        res.send(rows[0]);
+        res.send(results);
       }
     })
     .catch((err) => {
