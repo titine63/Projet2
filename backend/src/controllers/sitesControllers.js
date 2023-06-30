@@ -13,6 +13,7 @@ const browse = (req, res) => {
     });
 };
 
+// TO MODIFY - selects based on sites_id instead of category_id
 const browseByCategory = (req, res) => {
   models.sites
     .find(req.params.category_id)
