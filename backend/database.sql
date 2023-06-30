@@ -97,21 +97,7 @@ VALUES (
     '46.121',
     '3.4201'
   ),
-  INSERT INTO table_name (
-    nom,
-    adresse,
-    code_postal,
-    ville,
-    categorie,
-    description,
-    email,
-    telephone,
-    site_internet,
-    image,
-    latitude,
-    longitude
-  )
-VALUES (
+  (
     'Résidence Saint-Dizier',
     '7 rue d''Allier',
     '03200',
@@ -209,20 +195,20 @@ VALUES (
     'Meaulne-Vitray',
     'Proche de la forêt de Tronçais, cette ancienne ferme possède une terrasse avec vue panoramique sur la campagne et d''un jardin. Dans une ambiance "maison de famille", la propriétaire a apporté un soin particulier à la décoration, avec mobilier ancien.',
     'bhalle@hotmail.fr',
-    '+33 4 70 08 66 73, +33 6 63 17 03 95',
+    '+33 4 70 08 66 73',
     'https://www.allier-auvergne-tourisme.com/hebergement-locatif/meaulne-vitray/gite-les-plessers/5093905',
     'https://static.apidae-tourisme.com/filestore/objets-touristiques/images/18/182/7190034-diaporama.png',
     '46.5847',
     '2.645247'
   ),
-  VALUES (
+  (
     'Gîte Chalet du Plaix',
     '365 route du Plaix',
     '03360',
     'Meaulne-Vitray',
     'Charmant meublé situé dans un environnement arboré et verdoyant, pour profiter du calme de notre belle campagne bourbonnaise. Situé à 300 mètres d''altitude, il offre une vue exceptionnelle et de remarquables couchers de soleil.',
     'agnes.gangneron@gmail.com, philippe.gangneron@gmail.com',
-    '+33 6 03 01 48 98, +33 6 99 02 98 30',
+    '+33 6 03 01 48 98',
     'https://www.valleecoeurdefrance.fr/offres/gite-chalet-du-plaix-meaulne-fr-3849066/',
     'https://api.cloudly.space/resize/clip/1900/1080/75/aHR0cHM6Ly9zdGF0aWMuYXBpZGFlLXRvdXJpc21lLmNvbS9maWxlc3RvcmUvb2JqZXRzLXRvdXJpc3RpcXVlcy9pbWFnZXMvMTE3Lzk3LzE1NzUzNTg5LmpwZw==/image.jpg',
     '46.58495',
@@ -231,7 +217,7 @@ VALUES (
   (
     'Hôtel Trianon',
     '9 rue Desbrest',
-    '3200.0',
+    '03200',
     'Vichy',
     'Cet hôtel rénové, situé au coeur du centre-ville dans une rue calme est à proximité de la gare, des parcs, du palais des congrès, de l''opéra et des thermes. Il vous offre un confort douillet et des suites familiales de 4 à 6 personnes. Soirée étape.',
     'contact@hoteltrianonvichy.fr',
@@ -292,7 +278,7 @@ CREATE TABLE events (
 INSERT INTO events (name, date, image, latitude, longitude)
 VALUES (
     " teuf ",
-    " 2023 -06 -29 ",
+    "2023-06-29 00:00:00",
     " https: / / placekitten.com / 200 / 300 ",
     " 27.2424 ",
     " 21.2424 "

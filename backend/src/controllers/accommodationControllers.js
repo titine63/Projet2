@@ -12,61 +12,80 @@ const browse = (req, res) => {
     });
 };
 
-// const read = async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const accommodation = await accommodationManager.getById(id);
-//     if (accommodation) {
-//       res.json(accommodation);
-//     } else {
-//       res.status(404).json({ error: "Accommodation not found" });
-//     }
-//   } catch (error) {
-//     res.status(500).json({ error: "Failed to fetch accommodation" });
-//   }
-// };
+const read = (req, res) => {
+  models.accommodation
+    .find(req.params.id)
+    .then(([rows]) => {
+      if (rows[0] == null) {
+        res.sendStatus(404);
+      } else {
+        res.send(rows[0]);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
 
-// const add = async (req, res) => {
-//   const accommodation = req.body;
-//   try {
-//     const result = await accommodationManager.insert(accommodation);
-//     accommodation.id = result.insertId;
-//     res.status(201).json(accommodation);
-//   } catch (error) {
-//     res.status(500).json({ error: "Failed to add accommodation" });
-//   }
-// };
+const edit = (req, res) => {
+  const accommodation = req.body;
 
-// const edit = async (req, res) => {
-//   const { id } = req.params;
-//   const accommodation = req.body;
-//   accommodation.id = id;
-//   try {
-//     const result = await accommodationManager.update(accommodation);
-//     if (result.affectedRows === 0) {
-//       res.status(404).json({ error: "Accommodation not found" });
-//     } else {
-//       res.status(200).json(accommodation);
-//     }
-//   } catch (error) {
-//     res.status(500).json({ error: "Failed to update accommodation" });
-//   }
-// };
+  // TODO validations (length, format...)
 
-// const destroy = async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const result = await accommodationManager.delete(id);
-//     if (result.affectedRows === 0) {
-//       res.status(404).json({ error: "Accommodation not found" });
-//     } else {
-//       res.sendStatus(204);
-//     }
-//   } catch (error) {
-//     res.status(500).json({ error: "Failed to delete accommodation" });
-//   }
-// };
+  accommodation.id = parseInt(req.params.id, 10);
+
+  models.accommodation
+    .update(accommodation)
+    .then(([result]) => {
+      if (result.affectedRows === 0) {
+        res.sendStatus(404);
+      } else {
+        res.sendStatus(204);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
+const add = (req, res) => {
+  const accommodation = req.body;
+
+  // TODO validations (length, format...)
+
+  models.accommodation
+    .insert(accommodation)
+    .then(([result]) => {
+      res.location(`/accommodations/${result.insertId}`).sendStatus(201);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
+const destroy = (req, res) => {
+  models.accommodation
+    .delete(req.params.id)
+    .then(([result]) => {
+      if (result.affectedRows === 0) {
+        res.sendStatus(404);
+      } else {
+        res.sendStatus(204);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
 
 module.exports = {
   browse,
+  read,
+  edit,
+  add,
+  destroy,
 };
