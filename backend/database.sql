@@ -292,10 +292,40 @@ CREATE TABLE users (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 INSERT INTO users (firstname, lastname, email, hashedPassword)
 VALUES (
-    " mec ",
-    " inconnu ",
-    " inconnu @anonyme.com ",
-    " 183454835465 "
+    'John',
+    'Doe',
+    'john.doe@example.com',
+    "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"
+  ),
+(
+    'Valeriy',
+    'Appius',
+    'valeriy.ppius@example.com',
+    '$argon2id$v=19$m=16,t=2,p=1$emVmemVmemZlemZ6ZnpmZQ$eSetR6KPUNAGW+q+wDadcw'
+  ),
+(
+    'Ralf',
+    'Geronimo',
+    'ralf.geronimo@example.com',
+    '$argon2id$v=19$m=16,t=2,p=1$emVmemVmemZlemZ6ZnpmZXphZGF6ZGQ$a0bg5DZB6H6v3jjQC81DXg'
+  ),
+(
+    'Maria',
+    'Iskandar',
+    'maria.iskandar@example.com',
+    '$argon2id$v=19$m=16,t=2,p=1$emVmemVmemZlenplZHpkZnpmemZlemFkYXpkZA$V1qAnJDyMuuWG7g9yoGYXA'
+  ),
+(
+    'Jane',
+    'Doe',
+    'jane.doe@example.com',
+    '$argon2id$v=19$m=16,t=2,p=1$emVmemVmemZlenplZHpkZGZ6ZnpmZXphZGF6ZGQ$VCzq45PL9t8khtc44Kk5iw'
+  ),
+(
+    'Johanna',
+    'Martino',
+    'johanna.martino@example.com',
+    '$argon2id$v=19$m=16,t=2,p=1$emVmemVmemVmemZlenplZHpkZGZ6ZnpmZXphZGF6ZGQ$UKaGZ9hGFn/S5SBQDMe/Uw'
   );
 CREATE TABLE map (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
