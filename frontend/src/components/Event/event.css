@@ -1,5 +1,3 @@
-
-
 h2 {
   text-align: center;
   color: #00294e;
@@ -27,15 +25,14 @@ h3 {
 .even1,
 .even2,
 .even3 {
-width: 300px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-gap: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 .even1 img,
 .even2 img,
 .even3 img {
   max-width: 100%;
 }
-
