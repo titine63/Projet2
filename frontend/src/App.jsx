@@ -7,12 +7,14 @@ import SitePage from "@pages/site-page/Site";
 import RestaurationPage from "@pages/restauration-page/Restauration";
 import Home from "@pages/Home/Home";
 import AccommodationPage from "@pages/accommodation-page/Accommodation";
+import Users from "@pages/users/users";
 
 function App() {
   return (
     <Layout>
       <main className="wrapper app-container">
         <Routes>
+          <Route path="/users" element={<Users />} />
           <Route path="/" element={<Home />} />
           <Route path="/accommodation" element={<AccommodationPage />} />
           <Route path="/restauration" element={<RestaurationPage />} />

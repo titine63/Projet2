@@ -15,6 +15,7 @@ export default function Header() {
         <Link to="/accommodation">HEBERGEMENT</Link>
         <Link to="/restauration">RESTAURATION</Link>
         <Link to="/activities">ACTIVITES</Link>
+        <Link to="/users">SE CONNECTER</Link>
       </nav>
     </header>
   );
