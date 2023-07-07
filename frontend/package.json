@@ -12,6 +12,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@googlemaps/js-api-loader": "^1.15.2",
     "@react-google-maps/api": "^2.18.1",
+    "axios": "^1.4.0",
     "google-map-react": "^2.2.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
