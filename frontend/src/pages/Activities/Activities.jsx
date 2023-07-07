@@ -13,7 +13,7 @@ function Activities() {
       <section className="activities-categories">
         <div>
           <p>SPORT & LOISIRS</p>
-          <a href="/site">
+          <a href="/sites/category/2">
             <img
               className="activities-categories-img"
               src="https://picsum.photos/200/150"
@@ -23,7 +23,7 @@ function Activities() {
         </div>
         <div>
           <p>CULTURE</p>
-          <a href="/site">
+          <a href="/sites/category/1">
             <img
               className="activities-categories-img"
               src="https://picsum.photos/200/150"
@@ -33,7 +33,7 @@ function Activities() {
         </div>
         <div>
           <p>NATURE</p>
-          <a href="/site">
+          <a href="/sites/category/3">
             <img
               className="activities-categories-img"
               src="https://picsum.photos/200/150"
@@ -45,21 +45,21 @@ function Activities() {
       <section className="activity-ideas">
         <p>NOS SUGGESTIONS</p>
         <div className="activity-ideas">
-          <a href="/site">
+          <a href="/sites">
             <img
               className="activity-ideas-img"
               src="https://picsum.photos/150/100"
               alt="Idée d'activité"
             />
           </a>
-          <a href="/site">
+          <a href="/sites">
             <img
               className="activity-ideas-img"
               src="https://picsum.photos/150/100"
               alt="Idée d'activité"
             />
           </a>
-          <a href="/site">
+          <a href="/sites">
             <img
               className="activity-ideas-img"
               src="https://picsum.photos/150/100"
