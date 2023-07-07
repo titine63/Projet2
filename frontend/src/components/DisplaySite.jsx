@@ -11,23 +11,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function DisplaySite({ site }) {
   return (
     <div className="display-site">
-      <h3>{site.nom} </h3>
-      <h4>{site.catégorie}</h4>
+      <h3>{site.name} </h3>
       <img src={site.image} alt="Site" className="site-image" />
-      <p>{site.rue}</p>
+      <p>{site.street}</p>
       <p>
-        0{site["code postal"]} {site.city}
+        {site.postal_code} {site.city}
       </p>
       <p>{site.description}</p>
       <p>
         <FontAwesomeIcon icon={faEnvelope} /> Email : {site.email}
       </p>
       <p>
-        <FontAwesomeIcon icon={faPhone} /> Téléphone : {site.téléphone}
+        <FontAwesomeIcon icon={faPhone} /> Téléphone : {site.phone_number}
       </p>
       <p>
         <FontAwesomeIcon icon={faGlobe} /> Site Web :&nbsp;
-        <a href={site["site internet"]}>{site["site internet"]}</a>
+        <a href={site.website}>{site.website}</a>
       </p>
     </div>
   );
@@ -35,16 +34,16 @@ function DisplaySite({ site }) {
 
 DisplaySite.propTypes = {
   site: PropTypes.shape({
-    nom: PropTypes.string.isRequired,
-    catégorie: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    rue: PropTypes.string.isRequired,
-    "code postal": PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    postal_code: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    téléphone: PropTypes.string.isRequired,
-    "site internet": PropTypes.string.isRequired,
+    phone_number: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
+    category_id: PropTypes.number,
   }).isRequired,
 };
 

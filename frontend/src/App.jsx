@@ -8,6 +8,7 @@ import RestaurationPage from "@pages/restauration-page/Restauration";
 import Home from "@pages/Home/Home";
 import AccommodationPage from "@pages/accommodation-page/Accommodation";
 import Users from "@pages/users/users";
+import SitePageByCategory from "./pages/site-page/ActivitiesByCategory";
 
 function App() {
   return (
@@ -19,7 +20,11 @@ function App() {
           <Route path="/accommodations" element={<AccommodationPage />} />
           <Route path="/restauration" element={<RestaurationPage />} />
           <Route path="/activities" element={<Activities />} />
-          <Route path="/site" element={<SitePage />} />
+          <Route path="/sites" element={<SitePage />} />
+          <Route
+            path="/sites/category/:category_id"
+            element={<SitePageByCategory />}
+          />
         </Routes>
       </main>
     </Layout>
