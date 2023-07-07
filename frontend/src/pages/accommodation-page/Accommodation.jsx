@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import DisplayAccommodation from "../../components/DisplayAccommodation";
-import accommodationsData from "../../data/hebergements.json";
+
 import "./accommodation.css";
 
 function AccommodationPage() {
   const [accommodations, setAccommodations] = useState([]);
 
   useEffect(() => {
-    setAccommodations(accommodationsData);
+    axios
+      .get("http://localhost:5000/accommodations")
+      .then((res) => setAccommodations(res.data))
+      .catch((err) => console.info("err :>> ", err));
   }, []);
 
   return (

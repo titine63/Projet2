@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 import PropTypes from "prop-types";
 import "../pages/accommodation-page/accommodation.css";
@@ -11,28 +12,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function DisplayAccommodation({ accommodation }) {
   return (
     <div className="display-accommodation">
-      <h3>{accommodation.nom} </h3>
+      <h3>{accommodation.name} </h3>
       <img
         src={accommodation.image}
         alt="Hébergement"
         className="accommodation-image"
       />
-      <p>{accommodation.rue}</p>
+      <p>{accommodation.street}</p>
       <p>
-        0{accommodation["code postal"]} {accommodation.city}
+        0{accommodation.postal_code} {accommodation.city}
       </p>
       <p>{accommodation.description}</p>
       <p>
         <FontAwesomeIcon icon={faEnvelope} /> Email : {accommodation.email}
       </p>
       <p>
-        <FontAwesomeIcon icon={faPhone} /> Téléphone : {accommodation.téléphone}
+        <FontAwesomeIcon icon={faPhone} /> Téléphone :{" "}
+        {accommodation.phone_number}
+        {accommodation.phone_number}
       </p>
       <p>
         <FontAwesomeIcon icon={faGlobe} /> Site Web :&nbsp;
-        <a href={accommodation["site internet"]}>
-          {accommodation["site internet"]}
-        </a>
+        <a href={accommodation.website}>{accommodation.website}</a>
       </p>
     </div>
   );
@@ -40,15 +41,15 @@ function DisplayAccommodation({ accommodation }) {
 
 DisplayAccommodation.propTypes = {
   accommodation: PropTypes.shape({
-    nom: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    rue: PropTypes.string.isRequired,
-    "code postal": PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    postal_code: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    téléphone: PropTypes.string.isRequired,
-    "site internet": PropTypes.string.isRequired,
+    phone_number: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
   }).isRequired,
 };
 
