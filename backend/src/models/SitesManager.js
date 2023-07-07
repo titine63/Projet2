@@ -9,7 +9,7 @@ class SitesManager extends AbstractManager {
 
   findByCategory(category_id) {
     return this.database.query(
-      `select * from  ${this.table} where category_id = ?`,
+      `select * from  ${this.table} where sites.category_id=?`,
       [category_id]
     );
   }

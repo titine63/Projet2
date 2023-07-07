@@ -16,7 +16,8 @@ const browse = (req, res) => {
 // TO MODIFY - to display not found when category_id does not exist
 const browseByCategory = (req, res) => {
   models.sites
-    .findByCategory(req.params.category_id)
+    // eslint-disable-next-line radix
+    .findByCategory(parseInt(req.params.category_id))
     .then(([results]) => {
       if (results == null) {
         res.sendStatus(404);
