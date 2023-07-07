@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from "react";
 import DisplayRestauration from "../../components/DisplayRestauration";
-import restaurationsData from "../../data/restaurants.json";
 import "./restauration.css";
 
 function RestaurationPage() {
   const [restaurations, setRestaurations] = useState([]);
 
   useEffect(() => {
-    setRestaurations(restaurationsData);
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:5656/restaurants");
+        const jsonData = await response.json();
+
+        setRestaurations(jsonData);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des données:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (

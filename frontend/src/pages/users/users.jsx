@@ -1,6 +1,6 @@
 import "./users.css";
 
-export default function users() {
+function users() {
   return (
     <form className="form-connection" action="connect">
       <h1>CONNECTEZ-VOUS</h1>
@@ -24,3 +24,5 @@ export default function users() {
     </form>
   );
 }
+
+export default users;

@@ -11,28 +11,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function DisplayRestauration({ restauration }) {
   return (
     <div className="display-restauration">
-      <h3>{restauration.nom} </h3>
+      <h3>{restauration.name} </h3>
       <img
         src={restauration.image}
         alt="Restauration"
         className="restauration-image"
       />
-      <p>{restauration.rue}</p>
+      <p>{restauration.street}</p>
       <p>
-        0{restauration["code postal"]} {restauration.city}
+        {restauration.postal_code} {restauration.city}
       </p>
       <p>{restauration.description}</p>
       <p>
         <FontAwesomeIcon icon={faEnvelope} /> Email : {restauration.email}
       </p>
       <p>
-        <FontAwesomeIcon icon={faPhone} /> Téléphone : {restauration.téléphone}
+        <FontAwesomeIcon icon={faPhone} /> Téléphone :{" "}
+        {restauration.phone_number}
       </p>
       <p>
         <FontAwesomeIcon icon={faGlobe} /> Site Web :&nbsp;
-        <a href={restauration["site internet"]}>
-          {restauration["site internet"]}
-        </a>
+        <a href={restauration.website}>{restauration.website}</a>
       </p>
     </div>
   );
@@ -40,15 +39,15 @@ function DisplayRestauration({ restauration }) {
 
 DisplayRestauration.propTypes = {
   restauration: PropTypes.shape({
-    nom: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    rue: PropTypes.string.isRequired,
-    "code postal": PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    postal_code: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    téléphone: PropTypes.string.isRequired,
-    "site internet": PropTypes.string.isRequired,
+    phone_number: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
   }).isRequired,
 };
 
