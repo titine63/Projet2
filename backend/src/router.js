@@ -42,4 +42,6 @@ router.put("/users/:id", usersControllers.editUser);
 router.post("/users", usersControllers.addUser);
 router.delete("/users/:id", usersControllers.deleteUser);
 
+router.post("/login", usersControllers.getUsersByEmail);
+
 module.exports = router;

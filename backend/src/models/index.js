@@ -39,6 +39,7 @@ models.accommodation.setDatabase(pool);
 const RestaurantsManager = require("./RestaurantsManager");
 const EventsManager = require("./eventsManager");
 const SitesManager = require("./SitesManager");
+const UsersManager = require("./UsersManager");
 
 models.item = new ItemManager();
 models.item.setDatabase(pool);
@@ -50,6 +51,9 @@ models.restaurants.setDatabase(pool);
 
 models.events = new EventsManager();
 models.events.setDatabase(pool);
+
+models.users = new UsersManager();
+models.users.setDatabase(pool);
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 

@@ -1,5 +1,10 @@
 /* eslint-disable prettier/prettier */
+const jwt = require("jsonwebtoken");
+const argon2 = require("argon2");
 const models = require("../models");
+
+const jwtSecret = "secretKeyJwt";
+const jwtExpiration = "1h";
 
 const getAllUsers = (req, res) => {
   models.users
@@ -32,8 +37,6 @@ const getUserById = (req, res) => {
 const editUser = (req, res) => {
   const users = req.body;
 
-  // TODO validations (length, format...)
-
   users.id = parseInt(req.params.id, 10);
 
   models.users
@@ -53,13 +56,66 @@ const editUser = (req, res) => {
 
 const addUser = (req, res) => {
   const users = req.body;
+  // verify if User exist in DB
+  models.users.readUsersByEmail(users.email).then(([rows]) => {
+    if (rows[0] == null) {
+      // hash password in req.body
+      const hashOptions = {
+        type: argon2.argon2id,
+        memoryCost: 2 ** 16,
+        timeCost: 5,
+        parallelism: 1,
+      };
+      argon2
+        .hash(users.password, hashOptions)
+        .then((hashedPassword) => {
+          // supprimer le mot de passe de user
+          delete req.body.password;
 
-  // TODO validations (length, format...)
+          // ajouter le hashedPassword dans le noveau user qu'on va stocker dans la bdd
+          const newUser = { ...users, hashedPassword };
+
+          // créer le noveau user dans le bdd
+          models.users
+            .insert(newUser)
+            .then(([result]) => {
+              console.info("result", result);
+              res.status(200).send("user crée");
+            })
+            .catch((err) => {
+              res.status(500).send(err);
+            });
+        })
+        .catch((err) => {
+          res.status(401).send(err);
+        });
+    }
+  });
+};
+
+const getUsersByEmail = (req, res) => {
+  const { email, password } = req.body;
 
   models.users
-    .insert(users)
-    .then(([result]) => {
-      res.location(`/userss/${result.insertId}`).sendStatus(201);
+    .readUsersByEmail(email)
+    .then(([rows]) => {
+      if (rows[0] == null) {
+        res.sendStatus(400);
+      } else {
+        const passwordVerify = argon2.verify(rows[0].hashedPassword, password);
+
+        if (passwordVerify) {
+          const token = jwt.sign({ userId: rows[0].id }, jwtSecret, {
+            expiresIn: jwtExpiration,
+          });
+          res.status(200).json({
+            message: `Bonjour ${rows[0].firstname} ${rows[0].lastname} vous êtes connecté`,
+            token,
+          });
+        } else {
+          res.status(401).send("mot de passe incorrect");
+        }
+      }
     })
     .catch((err) => {
       console.error(err);
@@ -89,4 +145,5 @@ module.exports = {
   editUser,
   addUser,
   deleteUser,
+  getUsersByEmail,
 };

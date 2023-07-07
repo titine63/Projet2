@@ -6,10 +6,17 @@ class UsersManager extends AbstractManager {
     super({ table: "users" });
   }
 
-  insert(user) {
-    return this.database.query(`insert into ${this.table} (email) values (?)`, [
-      user.email,
+  readUsersByEmail(email) {
+    return this.database.query(`select * from ${this.table} where email = ?`, [
+      email,
     ]);
+  }
+
+  insert({ firstname, lastname, email, hashedPassword }) {
+    return this.database.query(
+      `insert into ${this.table} (firstname, lastname, email, hashedPassword) values (?, ?, ?, ?)`,
+      [firstname, lastname, email, hashedPassword]
+    );
   }
 
   update(user) {
