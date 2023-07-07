@@ -9,7 +9,7 @@ function AccommodationPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/accommodations")
+      .get("http://localhost:5656/accommodations")
       .then((res) => setAccommodations(res.data))
       .catch((err) => console.info("err :>> ", err));
   }, []);
