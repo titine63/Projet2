@@ -32,7 +32,7 @@ function users() {
     } catch (error) {
       console.error("Erreur lors de la récupération des données:", error);
       // eslint-disable-next-line no-alert
-      alert("Votre E-mail n'est pas correcte");
+      alert("Votre E-mail ou mot de passe n'est pas correcte");
     }
   };
 
