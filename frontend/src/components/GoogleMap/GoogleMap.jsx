@@ -83,19 +83,16 @@ export default function GoogleMap() {
         />
       </div>
       <div className="filtre">
-        <h2 className="type">Type d'établissement</h2>
+        <h2 className="type">Pour localiser</h2>
         <ul>
           <button type="button" className="type1">
-            Restauration
+            La restauration
           </button>
           <button type="button" className="type2">
-            Hôtels
+            Les hébergements
           </button>
           <button type="button" className="type3">
-            Bars
-          </button>
-          <button type="button" className="type4">
-            Snacks
+            Les sites & activités
           </button>
         </ul>
       </div>

@@ -6,42 +6,42 @@ export default function Event() {
       <h2>EVENEMENT A SUIVRE</h2>
 
       <ul className="events">
-        <li className="even1">
-          <h3>Visiter Vichy</h3>
+        <li className="event1">
+          <h3>Histoire d'eaux, Vichy : 2 000 ans de thermalisme</h3>
           <br />
           <img
-            className="img_even"
-            src="https://woody.cloudly.space/app/uploads/vichy/2022/05/thumbs/promenade-et-plage--dsf3830-xavier-thomas-640x360.jpg"
+            className="img_event"
+            src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/185/202/12962489.jpg"
             alt="aa"
           />
 
           <br />
 
-          <input className="btn_even" type="button" value="J'Y VAIS" />
+          <input className="btn_event" type="button" value="J'Y VAIS" />
         </li>
 
-        <li className="even2">
-          <h3>Visiter Vichy</h3>
+        <li className="event2">
+          <h3>Second Empire, Belle Époque, Âge d'Or de Vichy</h3>
           <br />
           <img
-            className="img_even"
-            src="https://woody.cloudly.space/app/uploads/vichy/2022/05/thumbs/promenade-et-plage--dsf3830-xavier-thomas-640x360.jpg"
+            className="img_event"
+            src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/15/93/12475663.jpg"
             alt="aa"
           />
           <br />
-          <input className="btn_even" type="button" value="J'Y VAIS" />
+          <input className="btn_event" type="button" value="J'Y VAIS" />
         </li>
 
-        <li className="even3">
-          <h3>Visiter Vichy</h3>
+        <li className="event3">
+          <h3>Vichy, Capitale de l'État français 40/44</h3>
           <br />
           <img
-            className="img_even"
-            src="https://woody.cloudly.space/app/uploads/vichy/2022/05/thumbs/promenade-et-plage--dsf3830-xavier-thomas-640x360.jpg"
+            className="img_event"
+            src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/130/215/7329666.jpg"
             alt="aa"
           />
           <br />
-          <input className="btn_even" type="button" value="J'Y VAIS" />
+          <input className="btn_event" type="button" value="J'Y VAIS" />
         </li>
       </ul>
     </>
