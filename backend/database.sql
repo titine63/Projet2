@@ -459,5 +459,3 @@ CREATE TABLE map (
   CONSTRAINT fk_events FOREIGN KEY (events_id) REFERENCES events(id),
   CONSTRAINT fk_users FOREIGN KEY (users_id) REFERENCES users(id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
-
-SELECT * FROM sites INNER JOIN category ON sites.category_id=category.id;
