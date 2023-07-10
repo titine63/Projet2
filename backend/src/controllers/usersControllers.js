@@ -75,12 +75,12 @@ const addUser = (req, res) => {
           // ajouter le hashedPassword dans le noveau user qu'on va stocker dans la bdd
           const newUser = { ...users, hashedPassword };
 
-          // créer le noveau user dans le bdd
+          // créer le noveau user dans la bdd
           models.users
             .insert(newUser)
             .then(([result]) => {
               console.info("result", result);
-              res.status(200).send("user crée");
+              res.status(200).send("user created");
             })
             .catch((err) => {
               res.status(500).send(err);

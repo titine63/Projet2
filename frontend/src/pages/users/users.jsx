@@ -21,7 +21,7 @@ function users() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const result = await axios.post("http://localhost:5656/login", {
+      const result = await axios.post("http://localhost:5000/login", {
         email,
         password,
       });
@@ -32,14 +32,14 @@ function users() {
     } catch (error) {
       console.error("Erreur lors de la récupération des données:", error);
       // eslint-disable-next-line no-alert
-      alert("Votre E-mail ou mot de passe n'est pas correcte");
+      alert("Votre e-mail ou mot de passe n'est pas correct");
     }
   };
 
   return (
     <div>
       {isLoggedIn ? (
-        <h2>Bienvenu, vous êtes connecté</h2>
+        <h2>Bienvenue, vous êtes connecté</h2>
       ) : (
         <form onSubmit={handleSubmit} className="form-connection">
           <h1>CONNECTEZ-VOUS</h1>
