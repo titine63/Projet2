@@ -3,7 +3,7 @@ import "./event.css";
 
 export default function Event() {
   const redirectToURL = (url) => {
-    window.location.href = url;
+    window.open(url, "_blank");
   };
 
   return (
@@ -39,7 +39,7 @@ export default function Event() {
           <br />
           <img
             className="img_event"
-            src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/15/93/12475663.jpg"
+            src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/18/93/12475666.jpg"
             alt="aa"
           />
           <br />

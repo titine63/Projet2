@@ -15,6 +15,7 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 50px;
 }
 
 .btn_event {
@@ -31,8 +32,8 @@ h3 {
   justify-content: center;
   gap: 10px;
 }
-.event1 img,
-.event2 img,
-.event3 img {
-  max-width: 100%;
+
+.img_event {
+  display: flex;
+  flex-direction: column;
 }

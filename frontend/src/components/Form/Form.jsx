@@ -1,13 +1,22 @@
 import "./form.css";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-export default function Form() {
+export default function Form({ onSearch }) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = () => {
+    onSearch(searchTerm);
+  };
   return (
     <form className="form">
       <input
         type="text"
         placeholder=" Agenda du Week-end, sites incontournables, restaurants"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button type="button">
+      <button onClick={handleSearch} type="button">
         <svg
           className="search"
           xmlns="http://www.w3.org/2000/svg"
@@ -19,3 +28,6 @@ export default function Form() {
     </form>
   );
 }
+Form.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+};
