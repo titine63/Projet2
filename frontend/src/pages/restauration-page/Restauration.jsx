@@ -8,7 +8,7 @@ function RestaurationPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/restaurants");
+        const response = await fetch("http://localhost:5656/restaurants");
         const jsonData = await response.json();
 
         setRestaurations(jsonData);

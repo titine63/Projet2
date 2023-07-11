@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function DisplayRestauration({ restauration }) {
   return (
-    <div className="display-restauration">
+    <div id={restauration.id} className="display-restauration">
       <h3>{restauration.name} </h3>
       <img
         src={restauration.image}
@@ -39,6 +39,7 @@ function DisplayRestauration({ restauration }) {
 
 DisplayRestauration.propTypes = {
   restauration: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     street: PropTypes.string.isRequired,

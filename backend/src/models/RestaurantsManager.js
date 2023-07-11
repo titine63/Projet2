@@ -23,5 +23,12 @@ class RestaurantsManager extends AbstractManager {
       ]
     );
   }
+
+  search(searchTerm) {
+    return this.database.query(
+      `SELECT * FROM ${this.table} WHERE name LIKE?;`,
+      [`%${searchTerm}%`]
+    );
+  }
 }
 module.exports = RestaurantsManager;

@@ -50,6 +50,13 @@ class AccommodationManager extends AbstractManager {
   delete(id) {
     return this.database.query(`DELETE FROM ${this.table} WHERE id = ?`, [id]);
   }
+
+  search(searchTerm) {
+    return this.database.query(
+      `SELECT * FROM ${this.table} WHERE name LIKE?;`,
+      [`%${searchTerm}%`]
+    );
+  }
 }
 
 module.exports = AccommodationManager;

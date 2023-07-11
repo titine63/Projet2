@@ -40,9 +40,14 @@ const RestaurantsManager = require("./RestaurantsManager");
 const EventsManager = require("./eventsManager");
 const SitesManager = require("./SitesManager");
 const UsersManager = require("./UsersManager");
+const SearchManager = require("./SearchManager");
 
 models.item = new ItemManager();
 models.item.setDatabase(pool);
+
+models.search = new SearchManager();
+models.search.setDatabase(pool);
+
 models.sites = new SitesManager();
 models.sites.setDatabase(pool);
 

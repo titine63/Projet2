@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import React, { useState } from "react";
+// import { Link } from "react-router-dom";
 import axios from "axios";
 import Form from "@components/Form/Form";
 import "./Home.css";
@@ -11,10 +12,11 @@ export default function Home() {
 
   const handleSearch = async (searchTerm) => {
     try {
-      const response = await axios.get(
+      const response = await axios.post(
         `http://localhost:5656/search?term=${searchTerm}`
       );
       setSearchResults(response.data);
+      console.info("searchResults :>> ", searchResults);
     } catch (error) {
       console.error("Error searching:", error);
     }
@@ -27,7 +29,11 @@ export default function Home() {
           <Form onSearch={handleSearch} />
           <ul>
             {searchResults.map((result) => (
-              <li key={result.id}>{result.name}</li>
+              <li key={result.id}>
+                <a href={`http://localhost:5173/restauration#${result.id}`}>
+                  {result.name}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
